@@ -10,8 +10,9 @@ import java.util.List;
 
 public class DialogContent extends MyMethods {
     public DialogContent() {
-        PageFactory.initElements(BasicDriver.getDriver(),this);
+        PageFactory.initElements(BasicDriver.getDriver(), this);
     }
+
     @FindBy(css = "input[placeholder='Username']")
     private WebElement loginUsername;
 
@@ -62,6 +63,46 @@ public class DialogContent extends MyMethods {
 
     @FindBy(xpath = "//tbody[@role='rowgroup']//td[2]")
     private List<WebElement> statesList;
+
+    @FindBy(xpath = "//span[@class='nav-link-title ng-star-inserted'][normalize-space()='Document Types']")
+    private WebElement documentTypesBtn;
+
+    @FindBy(xpath = "//div[@class='ng-star-inserted']//span[contains(text(),'Document Types')]")
+    private WebElement documentTypesHeader;
+
+    @FindBy(xpath = "/html[1]/body[1]/app[1]/vertical-layout-1[1]/div[1]/div[1]/div[1]/div[1]/content[1]/document-types[1]/ms-browse[1]/div[1]/ms-browse-table[1]/div[1]/ms-table[1]/div[1]/cdk-virtual-scroll-viewport[1]/div[1]/table[1]/thead[1]/tr[1]/th[7]/ms-table-toolbar[1]/div[1]/ms-add-button[1]/div[1]/button[1]/span[1]/fa-icon[1]/*[name()='svg'][1]")
+    private WebElement addDocument;
+
+    @FindBy(xpath = "(//input[@data-placeholder='Name'])[2]")
+    private WebElement documentName;
+
+    @FindBy(xpath = "(//span[contains(@class, 'mat-select-placeholder')])[2]")
+    private WebElement documentStageDropDown;
+
+    @FindBy(css = "textarea[formcontrolname='description']")
+    private WebElement documentDescription;
+
+    @FindBy(xpath = "//span[contains(text(),'Save')]")
+    private WebElement documentSaveBtn;
+
+    @FindBy(className = "mat-option-text")
+    private List<WebElement> documentStages;
+
+    @FindBy(xpath = "(//span//input[@role=\"switch\"])[31]")
+    private WebElement requiredToggle;
+
+    @FindBy(xpath = "(//span//input[@role=\"switch\"])[32]")
+    private WebElement activeToggle;
+
+    @FindBy (xpath = "(//span//input[@role=\"switch\"])[33]")
+    private WebElement cameraToggle;
+
+    @FindBy (css = "[class=\"mat-slide-toggle-bar\"]")
+    private List<WebElement> allToggles;
+
+    public List<WebElement> getAllToggles() {
+        return allToggles;
+    }
 
     public List<WebElement> getStatesList() {
         return statesList;
@@ -185,5 +226,49 @@ public class DialogContent extends MyMethods {
 
     public WebElement getLoginBtn() {
         return loginBtn;
+    }
+
+    public WebElement getDocumentTypesBtn() {
+        return documentTypesBtn;
+    }
+
+    public WebElement getDocumentTypesHeader() {
+        return documentTypesHeader;
+    }
+
+    public WebElement getAddDocument() {
+        return addDocument;
+    }
+
+    public WebElement getDocumentName() {
+        return documentName;
+    }
+
+    public WebElement getDocumentStage() {
+        return documentStageDropDown;
+    }
+
+    public WebElement getDocumentDescription() {
+        return documentDescription;
+    }
+
+    public WebElement getDocumentSaveBtn() {
+        return documentSaveBtn;
+    }
+
+    public List<WebElement> getDocumentStages() {
+        return documentStages;
+    }
+
+    public WebElement getRequiredToggle() {
+        return requiredToggle;
+    }
+
+    public WebElement getActiveToggle() {
+        return activeToggle;
+    }
+
+    public WebElement getCameraToggle() {
+        return cameraToggle;
     }
 }
