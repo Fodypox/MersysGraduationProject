@@ -85,7 +85,8 @@ public class MyMethods {
         element.click();
 
     }
-    public void scroll(WebElement element){
+
+    public void scroll(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) BasicDriver.getDriver();
         js.executeScript("arguments[0].scrollLeft += 500", element);
     }

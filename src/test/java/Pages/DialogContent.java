@@ -10,8 +10,9 @@ import java.util.List;
 
 public class DialogContent extends MyMethods {
     public DialogContent() {
-        PageFactory.initElements(BasicDriver.getDriver(),this);
+        PageFactory.initElements(BasicDriver.getDriver(), this);
     }
+
     @FindBy(css = "input[placeholder='Username']")
     private WebElement loginUsername;
 
