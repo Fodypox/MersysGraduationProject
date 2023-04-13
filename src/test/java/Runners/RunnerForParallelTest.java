@@ -12,13 +12,11 @@ import org.testng.annotations.Parameters;
         glue = {"StepDefinitions"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
-public class RunnerForParalleTest extends AbstractTestNGCucumberTests {
+public class RunnerForParallelTest extends AbstractTestNGCucumberTests {
     @BeforeClass
     @Parameters(value = "browser")
-    public void beforeClass(String browserName){
+    public void beforeClass(String browserName) {
         BasicDriver.setThreadDriverName(browserName);
-
-
     }
 
 }
