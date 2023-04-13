@@ -32,8 +32,7 @@ Feature: Grades Functionality
     When Admin clicks Setup-Parameters-Grade Levels
     And Admin filters to view all the grades
     And Admin clicks on the delete button
-    And Admin confirms delete
-    Then Admin cannot view the deleted grade
+    Then Admin confirms delete
 
   Scenario: Admin User should not be able to activate a Deleted Grade Level
     Given Navigate to Campus

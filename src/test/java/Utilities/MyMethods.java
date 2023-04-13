@@ -51,6 +51,10 @@ public class MyMethods {
         return element.isDisplayed();
     }
 
+    public boolean isDisplayed(WebElement element) {
+        return element.isDisplayed();
+    }
+
     public boolean isSelected(WebElement element) {
         waitUntilClickable(element);
         return element.isSelected();
