@@ -137,7 +137,7 @@ public class Bank_Account_Steps {
     public void iShouldToSeeTheDeletedAccountSuccessMessage() {
         ba.waitUntilVisible(ba.getInfoDisplay());
         iShouldToSeeNotFoundSuccessMessage();
-    }     // Verification step #4
+    }     // Verification step #4.
 
     @When("I try to search deleted bank account")
     public void iTryToSearchDeletedBankAccount() {

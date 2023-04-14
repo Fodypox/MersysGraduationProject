@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class Bank_Account_POM extends MyMethods {
     public Bank_Account_POM() {
         PageFactory.initElements(BasicDriver.getDriver(), this);
-    } //PageFactory
+    } //PageFactory.
 
     @FindBy(xpath = "//span[text()='Setup']")
     private WebElement setup;
