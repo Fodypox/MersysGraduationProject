@@ -67,7 +67,6 @@ public class AslanbekPositionCategories {
 
     @And("I Click on Delete button on pop up window")
     public void iClickOnDeleteButtonOnPopUpWindow() {
-
         ap.wait(2);
         ap.clickMethod(ap.getConfirmDeleteBtn());
     }
