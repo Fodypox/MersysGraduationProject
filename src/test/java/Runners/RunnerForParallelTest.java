@@ -8,7 +8,7 @@ import org.testng.annotations.Parameters;
 
 @CucumberOptions(
         tags = "@SmokeTest",
-        features = {"src/test/java/FeatureFiles"},
+        features = {"src/test/java/Features"},
         glue = {"StepDefinitions"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
