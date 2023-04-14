@@ -49,8 +49,7 @@ public class BasicDriver {
         }
         if (threadDriver.get() != null) {
             threadDriver.get().quit();
-            WebDriver driver = null;
-            threadDriver.set(driver);
+            threadDriver.set(null);
         }
     }
 
