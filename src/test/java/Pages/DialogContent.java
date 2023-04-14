@@ -80,7 +80,7 @@ public class DialogContent extends MyMethods {
     private WebElement documentStageDropDown;
 
     @FindBy(css = "textarea[formcontrolname='description']")
-    private WebElement documentDescription;
+    private WebElement documentDescriptionField;
 
     @FindBy(xpath = "//span[contains(text(),'Save')]")
     private WebElement documentSaveBtn;
@@ -94,10 +94,10 @@ public class DialogContent extends MyMethods {
     @FindBy(xpath = "(//span//input[@role=\"switch\"])[32]")
     private WebElement activeToggle;
 
-    @FindBy (xpath = "(//span//input[@role=\"switch\"])[33]")
+    @FindBy(xpath = "(//span//input[@role=\"switch\"])[33]")
     private WebElement cameraToggle;
 
-    @FindBy (css = "[class=\"mat-slide-toggle-bar\"]")
+    @FindBy(css = "[class=\"mat-slide-toggle-bar\"]")
     private List<WebElement> allToggles;
 
     public List<WebElement> getAllToggles() {
@@ -178,7 +178,6 @@ public class DialogContent extends MyMethods {
     public WebElement getCountryNameSearch() {
         return countryNameSearch;
     }
-
     public WebElement getCountryCodeSearch() {
         return countryCodeSearch;
     }
@@ -192,6 +191,34 @@ public class DialogContent extends MyMethods {
 
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     private WebElement successMessage;
+
+    @FindBy(xpath = "//input[@id='ms-text-field-0']")
+    private WebElement documentSearchField;
+
+    @FindBy(xpath = "//span[contains(text(),'Search')]")
+    private WebElement documentSearchButton;
+
+    @FindBy(xpath = "/html[1]/body[1]/app[1]/vertical-layout-1[1]/div[1]/div[1]/div[1]/div[1]/content[1]/document-types[1]/ms-browse[1]/div[1]/ms-browse-table[1]/div[1]/ms-table[1]/div[1]/cdk-virtual-scroll-viewport[1]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[1]/ms-edit-button[1]/button[1]/span[1]/fa-icon[1]/*[name()='svg'][1]")
+    private WebElement editIcon;
+
+    @FindBy(xpath = "/html[1]/body[1]/app[1]/vertical-layout-1[1]/div[1]/div[1]/div[1]/div[1]/content[1]/document-types[1]/ms-browse[1]/div[1]/ms-browse-table[1]/div[1]/ms-table[1]/div[1]/cdk-virtual-scroll-viewport[1]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[1]/ms-delete-button[1]/button[1]/span[1]/fa-icon[1]/*[name()='svg'][1]/*[name()='path'][1]")
+    private WebElement deleteIcon;
+
+    @FindBy(xpath = "//mat-select[@formcontrolname='attachmentStages']")
+    private WebElement documentStageEditDropdown;
+
+    @FindBy(xpath = "//span[normalize-space()='Delete']")
+    private WebElement deleteButton;
+
+    @FindBy(xpath = "//div[contains(text(),'There is no data to display')]")
+    private WebElement noResultsMessage;
+
+    @FindBy (xpath = "//button[contains(@class, 'mat-button-disabled') and contains(., 'Save')")
+    private WebElement disabledDocumentSaveButton;
+
+    @FindBy (xpath = "//mat-error[@id='mat-error-2']")
+    private WebElement documentAddErrorMessage;
+
 
     public WebElement getSuccessMessage() {
         return successMessage;
@@ -244,12 +271,8 @@ public class DialogContent extends MyMethods {
         return documentName;
     }
 
-    public WebElement getDocumentStage() {
+    public WebElement getDocumentStageDropDown() {
         return documentStageDropDown;
-    }
-
-    public WebElement getDocumentDescription() {
-        return documentDescription;
     }
 
     public WebElement getDocumentSaveBtn() {
@@ -270,5 +293,45 @@ public class DialogContent extends MyMethods {
 
     public WebElement getCameraToggle() {
         return cameraToggle;
+    }
+
+    public WebElement getDocumentSearchField() {
+        return documentSearchField;
+    }
+
+    public WebElement getDocumentSearchButton() {
+        return documentSearchButton;
+    }
+
+    public WebElement getEditIcon() {
+        return editIcon;
+    }
+
+    public WebElement getDeleteIcon() {
+        return deleteIcon;
+    }
+
+    public WebElement getDocumentDescriptionField() {
+        return documentDescriptionField;
+    }
+
+    public WebElement getDocumentStageEditDropdown() {
+        return documentStageEditDropdown;
+    }
+
+    public WebElement getDeleteButton() {
+        return deleteButton;
+    }
+
+    public WebElement getNoResultsMessage() {
+        return noResultsMessage;
+    }
+
+    public WebElement getDisabledDocumentSaveButton() {
+        return disabledDocumentSaveButton;
+    }
+
+    public WebElement getDocumentAddErrorMessage() {
+        return documentAddErrorMessage;
     }
 }
