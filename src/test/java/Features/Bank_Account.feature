@@ -11,7 +11,7 @@ Feature: Add Edit Delete
     When I add new Bank Account
     Then I should to see the added account success message
     Then delete account
-    # scenario N 1 is DONE \\\\\\\\\\\\\\\\\\\\\\\\\\
+    # scenario N 1 is DONE \\\\\\\\\\\\\\\\\\\\\\\\\\\
 
   Scenario: Add new bank account negative test
     Given Open Bank Account ander Parameters Setup
