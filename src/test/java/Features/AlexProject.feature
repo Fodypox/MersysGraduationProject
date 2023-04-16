@@ -27,7 +27,7 @@ Feature: Add Edit Delete School Department categories
     When edit the School Department Account
     Then should be see success edited account success message
     Then delete updated account
-    # scenario N 3 is DONE ///////////////////////
+    # scenario N 3 is DONE /////////////////////////
 
 
   Scenario: Delete Department account positive test
@@ -35,7 +35,7 @@ Feature: Add Edit Delete School Department categories
     When add new School Department Account
     Then delete account
     Then should to see the deleted account success message
-# scenario N4 is DONE ////////////////////////////////////////////////
+# scenario N4 is DONE //////////////////////////////////////////////////
 
   Scenario: Search for deleted School Department account negative test
     Given Open Department Categories under Setup School Setup
