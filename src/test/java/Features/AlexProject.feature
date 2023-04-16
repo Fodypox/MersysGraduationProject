@@ -1,4 +1,4 @@
-Feature: Position Categories
+Feature: Add Edit Delete School Department categories
 
   Background: Login steps
     Given Navigate to Campus
@@ -7,7 +7,7 @@ Feature: Position Categories
     Then User should login successfully
 
   Scenario: Add new Department account positive test
-    Given Go to Departments Categories under Setup School Setup
+    Given Open Department Categories under Setup School Setup
     When add new School Department Account
     Then should to see the added account success message
     Then delete account
@@ -17,7 +17,7 @@ Feature: Position Categories
     Given Open Department Categories under Setup School Setup
     When add any exist School Department
     Then should be see the warning message
-    # The School Department with IBAN "PA78" already exists.   ???
+    # The School Department with Alex "12345" already exists.
     Then delete account
   # scenario N 2 is DONE ///////////////////////
 
