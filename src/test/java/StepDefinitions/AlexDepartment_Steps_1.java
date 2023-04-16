@@ -97,7 +97,7 @@ public class AlexDepartment_Steps_1 {
 
     }
 
-    //4th Scenario
+    //4th Scenario   -- that scenarion not work out for me !
     @Then("should to see the deleted account success message")
     public void should_to_see_the_deleted_account_success_message() {
 

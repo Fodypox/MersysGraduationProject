@@ -87,7 +87,7 @@ public class AlexPOM extends MyMethods {
     @FindBy(xpath = "//div[text()='The School Department with Alex \"12345\" already exists.']")
     private WebElement warningMessage;
 
-    public WebElement getWarningMessage() {
+    public WebElement getWarningMessage() {  // some
         return warningMessage;
     }
 
