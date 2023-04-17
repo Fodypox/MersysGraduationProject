@@ -119,6 +119,7 @@ public class NurSteps {
 
     @And("I click on the delete button")
     public void iClickOnTheDeleteButton() {
+        pf.wait.until(ExpectedConditions.numberOfElementsToBeLessThan(By.cssSelector("svg[data-icon='trash-can']"), 10));
         pf.clickMethod(pf.getDeleteBtn());
     }
 
