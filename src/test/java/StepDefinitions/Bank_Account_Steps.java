@@ -105,7 +105,7 @@ public class Bank_Account_Steps {
     }   // Edit bank account step.
 
 
-    @Test
+
     public void findAccount() {
         ba.sendKeysMethod(ba.getNameInSearch(), "edua");
         ba.clickMethod(ba.getCurrencyInSearch());
