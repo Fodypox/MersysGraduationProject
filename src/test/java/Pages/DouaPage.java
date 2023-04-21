@@ -27,15 +27,17 @@ public class DouaPage extends MyMethods {
     WebElement shortNameField;
     @FindBy(xpath = "(//input[@id='ms-text-field-2'])[1]")
     WebElement orderField;
-    @FindBy(xpath = "//button[@class='mat-focus-indicator mat-tooltip-trigger mat-accent mat-button mat-raised-button mat-button-base ng-star-inserted']")
+    @FindBy(xpath = "//button[@class='mat-focus-indicator mat-tooltip-trigger mat-accent mat-button mat-button-base ng-star-inserted mat-raised-button']")
     WebElement saveButton;
+    @FindBy(xpath = "//button[@class='mat-focus-indicator mat-tooltip-trigger mat-accent mat-button mat-button-base mat-raised-button ng-star-inserted']")
+    WebElement updateButton;
     @FindBy(xpath = "(//div[@class='mat-form-field-infix ng-tns-c12-50'])[1]")
     WebElement filters;
     @FindBy(xpath = "//span[normalize-space()='500']")
     WebElement filtersByFiveHundred;
-    @FindBy(xpath = "//td[normalize-space()='jack']")
-    WebElement findingJack;
-    @FindBy(xpath = "//td[normalize-space()='jack']")
+    @FindBy(xpath = "//td[normalize-space()='ahmedp']")
+    WebElement findingahmedp;
+    @FindBy(xpath = "//td[normalize-space()='ahmedp']")
     WebElement editIcon;
     @FindBy(xpath = "(//span[@class='mat-button-wrapper'])[34]")
     WebElement deleteIcon;
@@ -70,7 +72,7 @@ public class DouaPage extends MyMethods {
 
     public void inputtingGradeInformation() {
         nameField.click();
-        nameField.sendKeys("jack");
+        nameField.sendKeys("ahmedp");
         shortNameField.click();
         shortNameField.sendKeys("jk");
         orderField.click();
@@ -81,18 +83,22 @@ public class DouaPage extends MyMethods {
         clickMethod(saveButton);
     }
 
+    public void clickingOnUpdateButton() {
+        clickMethod(updateButton);
+    }
+
     public void applyingFilters() {
         clickMethod(filters);
         clickMethod(filtersByFiveHundred);
     }
 
     public void viewTheGrade() {
-        isPresent(findingJack);
+        isPresent(findingahmedp);
     }
 
     public boolean findingGradeAfterDelete() {
         modifyImplicitWaits();
-        isDisplayed(findingJack);
+        isDisplayed(findingahmedp);
         turnOnImplicitWaits();
         return false;
     }

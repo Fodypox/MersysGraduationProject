@@ -62,9 +62,14 @@ public class DouaGradeSteps {
 
     @Then("Admin cannot view the deleted grade")
     public void adminCannotViewTheDeletedGrade() {
-        Boolean isPresent = BasicDriver.getDriver().findElements(By.xpath("//td[normalize-space()='jack']")).size() > 0;
+        Boolean isPresent = BasicDriver.getDriver().findElements(By.xpath("//td[normalize-space()='ahmedp']")).size() > 0;
         if (isPresent == false) {
             assert true;
         }
+    }
+
+    @And("Admin clicks on Save for update")
+    public void adminClicksOnSaveForUpdate() {
+        douaPage.clickingOnUpdateButton();
     }
 }

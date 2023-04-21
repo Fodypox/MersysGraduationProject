@@ -21,7 +21,7 @@ Feature: Grades Functionality
     And Admin filters to view all the grades
     And Admin clicks on the Edit button
     And Admin updates grade name
-    And Admin clicks on Save
+    And Admin clicks on Save for update
     And Admin can view the newly added grade from the list
 
   Scenario: Admin User should be able to Delete Grade Levels
