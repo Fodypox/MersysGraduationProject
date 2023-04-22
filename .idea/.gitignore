@@ -1,0 +1,8 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Ignore XML files in IDEA folder
+.idea/**/*.xml
+
+# Ignore class files in target folder
+target/**/*.class
