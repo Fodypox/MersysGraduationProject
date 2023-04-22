@@ -6,6 +6,7 @@ Feature: Add Edit Delete
     And Click on Login Button
     Then User should login successfully
 
+  @SmokeTest
   Scenario: Add new bank account positive test
     Given Open Bank Account ander Parameters Setup
     When I add new Bank Account

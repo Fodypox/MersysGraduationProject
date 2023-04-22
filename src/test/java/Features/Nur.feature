@@ -6,6 +6,7 @@ Feature: Fields feature under Parameter
     And Click on Login Button
     Then User should login successfully
 
+  @SmokeTest
   Scenario: Validate as an Admin User i should be able to add a new field in Fields
     And I click on the set up
     And I click on the parameters
@@ -15,6 +16,7 @@ Feature: Fields feature under Parameter
     And I click on the save button
     Then user should see the success message about adding new field
 
+  @SmokeTest
   Scenario: Validate as an Admin User is  able to edit with new code in created field in Fields
     And I click on the set up
     And I click on the parameters
@@ -26,6 +28,7 @@ Feature: Fields feature under Parameter
     And I click on the save button
     Then user should see the success message about editing new field
 
+  @SmokeTest
   Scenario: Validate as an Admin User is able to delete a created field in Fields
     And I click on the set up
     And I click on the parameters

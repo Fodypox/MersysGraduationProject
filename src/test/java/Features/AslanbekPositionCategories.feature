@@ -6,6 +6,7 @@ Feature: Position Categories
     And Click on Login Button
     Then User should login successfully
 
+  @SmokeTest
   Scenario: Add a new Position Category under Human Resources Setup
     Given Go to Position Categories under Human Resources Setup
     When I Click on Add Position Category button
@@ -20,6 +21,7 @@ Feature: Position Categories
     And I Click on Save button
     Then User should get error message The Position Category with given name already exists
 
+  @SmokeTest
   Scenario: Edit Position Category under Human Resources Setup
     Given Go to Position Categories under Human Resources Setup
     When I Type a Position Category in Name field as "SDET" and click on Search button
@@ -28,6 +30,7 @@ Feature: Position Categories
     And I Click on Save button
     Then Position Category should be successfully updated
 
+  @SmokeTest
   Scenario: Delete Position Category under Human Resources Setup
     Given Go to Position Categories under Human Resources Setup
     When I Type a Position Category in Name field as "Quality Assurance" and click on Search button

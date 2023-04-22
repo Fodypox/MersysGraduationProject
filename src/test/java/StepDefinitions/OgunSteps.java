@@ -11,15 +11,15 @@ public class OgunSteps {
 
     OgunPage elements = new OgunPage();
 
-    @And("I click on the set up")
+    /*@And("I click on the set up")
     public void iClickOnTheSetUp() {
         elements.clickMethod(elements.getSetupButton());
-    }
+    }*/
 
-    @And("I click on the parameters")
+    /*@And("I click on the parameters")
     public void iClickOnTheParameters() {
         elements.clickMethod(elements.getParametersButton());
-    }
+    }*/
 
     @And("I click on Nationalities")
     public void iClickOnNationalities() {
