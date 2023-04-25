@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import Pages.DialogContent;
 import Pages.DimaPom;
 import Utilities.BasicDriver;
 import io.cucumber.java.en.Then;
@@ -12,6 +13,8 @@ import org.testng.Assert;
 public class DimaSchoolSteps {
 
     DimaPom dp = new DimaPom();
+    DialogContent ds = new DialogContent();
+
 
     @When("Admin click Setup button")
     public void adminClickSetupButton() {
@@ -29,21 +32,18 @@ public class DimaSchoolSteps {
     }
 
     @When("Admin click Add Location.  +")
-    public void adminClickAddLocation()
-    {dp.clickMethod(dp.getAdminClickAddLocation());
+    public void adminClickAddLocation() {
+        dp.clickMethod(dp.getAdminClickAddLocation());
     }
-
-
 
 
     @When("Admin writes name, short name, Location Type, Capacity")
     public void adminWritesNameShortNameLocationTypeCapacity() {
 
 //        dp.sendKeysMethod(BasicDriver.getDriver().findElement(By.cssSelector("input[id='ms-text-field-0']")),"Adi");
-        dp.sendKeysMethod(dp.getWritesName(),"Dima");
+        dp.sendKeysMethod(dp.getWritesName(), "Dima");
         dp.sendKeysMethod(dp.getShortName(), "Adi");
         dp.sendKeysMethod(dp.getCapacity(), "23");
-
 
 
     }
@@ -52,18 +52,6 @@ public class DimaSchoolSteps {
     public void adminClickSaveButton() {
         dp.clickMethod(dp.getShortName());
         dp.clickMethod(dp.getSaveButton());
-    }
-
-    @Then("Admin will see success message: {string}")
-    public void adminWillSeeSuccessMessage(String arg0) {
-////        Assert.assertEquals(dp.getSuccessМessage().getText(),arg0);
-//
-//        String expect =arg0;
-//        System.out.println(expect);
-//        WebElement ectual = dp.getSuccessМessage();
-//        System.out.println(ectual.getText());
-////        dp.verifyContainsText(ectual,expect);
-
     }
 
 
@@ -75,15 +63,13 @@ public class DimaSchoolSteps {
 
     @When("Admin writes other name")
     public void adminWritesOtherName() {
-        dp.sendKeysMethod(dp.getWritesNewName(),"Dim");
+        dp.sendKeysMethod(dp.getWritesNewName(), "Dim");
     }
 
     @When("Admin click Delete button")
     public void adminClickDeleteButton() {
         dp.clickMethod(dp.getClickDelete());
         dp.clickMethod(dp.getClickDelete2());
-
-
 
 
     }
@@ -93,6 +79,25 @@ public class DimaSchoolSteps {
 
         dp.sendKeysMethod(dp.getShortName2(), "DS");
         dp.sendKeysMethod(dp.getCapacity2(), "23");
+    }
+
+    @Then("Admin will see success message: {string}")
+    public void adminWillSeeSuccessMessage(String arg0) {
+        ds.verifyContainsText(ds.getSuccessMessage(), arg0);
+
+    }
+
+    @Then("Admin will see  message: {string}")
+    public void adminWillSeeMessage(String arg0) {
+        dp.verifyContainsText(dp.getErrorMessage(), arg0);
+
+
+    }
+
+    @Then("Admin will see error message: This field cannot be left blank!")
+    public void adminWillSeeErrorMessageThisFieldCannotBeLeftBlank() {
+      dp.wait(3);
+        Assert.assertTrue(dp.getLeftBlank().isDisplayed());
     }
 
 //            boolean addedNewMessage = dp.verifyIsDisplayedMethod(dp.getThisFieldCannotBeLeftBlank());

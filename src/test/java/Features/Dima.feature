@@ -14,7 +14,7 @@ Feature: Position Categories
     When Admin click Add Location.  +
     When Admin writes name, short name, Location Type, Capacity
     When Admin click Save button
-#    Then Admin will see success message: "location successfully created."
+  Then Admin will see success message: "successfully"
 
                                   #2
   Scenario: 1 Admin User should be able to Add  School Locations
@@ -24,7 +24,7 @@ Feature: Position Categories
     When Admin click Add Location.  +
     When Admin writes name, short name, Location Type, Capacity
     When Admin click Save button
-#    Then Admin will see  message: "The School Location with Name "Dima" already exists."
+    Then Admin will see  message: "already exists"
 
                                   #3
 
@@ -35,7 +35,7 @@ Feature: Position Categories
     When Admin click Edit Location
     When  Admin writes other name
     When Admin click Save button
-#    Then Admin will see success message: "location successfully updated"
+    Then Admin will see success message: "updated"
 
 
                                     #4
@@ -45,7 +45,7 @@ Feature: Position Categories
     When  Admin click School Setup  button
     When  Admin click Locations button
     When Admin click Delete button
-#    Then Admin will see success message: "location successfully Delete"
+   Then Admin will see success message: "successfully"
 
 
                                      #5
@@ -55,7 +55,7 @@ Feature: Position Categories
     When Admin click Locations button
     When Admin click Add Location.  +
     When Admin writes  short name, Location Type, Capacity
-#    Then Admin will see success message: " This field cannot be left blank!"
+   Then  Admin will see error message: This field cannot be left blank!
 
 
 

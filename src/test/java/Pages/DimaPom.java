@@ -61,6 +61,24 @@ public class DimaPom extends MyMethods {
     @FindBy(css = "//*[@id='mat-error-7']")
     private WebElement ThisFieldCannotBeLeftBlank;
 
+
+    @FindBy(xpath = "//div[contains(text(),'already exists')]")
+    private WebElement errorMessage;
+
+
+
+
+    @FindBy(xpath = "//*[text()=' This field cannot be left blank!']")
+    private WebElement leftBlank;
+
+    public WebElement getLeftBlank() {
+        return leftBlank;
+    }
+
+    public WebElement getErrorMessage() {
+        return errorMessage;
+    }
+
     public WebElement getThisFieldCannotBeLeftBlank() {
         return ThisFieldCannotBeLeftBlank;
     }
