@@ -10,37 +10,36 @@ Feature: Add Edit Delete School Department categories
     Given Open Department Categories under Setup School Setup
     When add new School Department Account
     Then should to see the added account success message
-    Then delete account
-    # scenario N 1 is DONE \\\\\\\\\\\\\\\\\\\\\\\\\\\/
+    # scenario N 1 is Done   \\\\\\\\\\\\\\\\\\\\\\\\\\\
 
   Scenario: Add new Department account negative test
     Given Open Department Categories under Setup School Setup
     When add any exist School Department
     Then should be see the warning message
     # The School Department with Alex "12345" already exists.
-    Then delete account
-  # scenario N 2 is DONE ///////////////////////
+  # scenario N 2 is Done! ///////////////////////
 
   Scenario: Edit Department account
     Given Open Department Categories under Setup School Setup
     When add new School Department Account
     When edit the School Department Account
     Then should be see success edited account success message
-    Then delete updated account
-    # scenario N 3 is DONE /////////////////////////
+    # scenario N 3 is  not pass yet //////////////////////////////
 
 
   Scenario: Delete Department account positive test
     Given Open Department Categories under Setup School Setup
     When add new School Department Account
-    Then delete account
+    Then delete department
     Then should to see the deleted account success message
 # scenario N4 is DONE //////////////////////////////////////////////////
 
-  Scenario: Search for deleted School Department account negative test
+  Scenario: for edit School Department account negative test
     Given Open Department Categories under Setup School Setup
     When add new School Department Account
-    Then delete account
-    When try to search deleted School Department account
+    And edit the School Department Account
     Then should to see not found success message
-    # scenario N 5 is DONE /////////////////////////////////////////////
+    Then delete account
+
+    # scenario N 5 is  /////////////////////////////////////////////
+  #cant find department

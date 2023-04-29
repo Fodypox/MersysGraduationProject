@@ -77,15 +77,18 @@ public class AlexPOM extends MyMethods {
         return buttonSave;
     }
 
-    @FindBy(xpath = "//div[text()='School Department successfully updated']")
+    @FindBy(xpath = "//div[contains(text(),'successfully')]")
     private WebElement successMessage;
+    ////div[contains(text(),'successfully')]         //div[text()='School Department successfully updated']
 
     public WebElement getSuccessMessage() {
         return successMessage;
     }
 
-    @FindBy(xpath = "//div[text()='The School Department with Alex \"12345\" already exists.']")
+    @FindBy(xpath = "//div[contains(text(),'There is already Department with')]")
     private WebElement warningMessage;
+    //  //div[contains(text(),'already exists')]
+    //  //div[text()='The School Department with Alex "12345" already exists.']
 
     public WebElement getWarningMessage() {  // some
         return warningMessage;
@@ -109,5 +112,12 @@ public class AlexPOM extends MyMethods {
     }
 
 
+
+    @FindBy(css = "ms-delete-button")
+    private  WebElement deleteB;
+
+    public WebElement getDeleteB() {
+        return deleteB;
+    }
 }
 

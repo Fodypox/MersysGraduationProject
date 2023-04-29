@@ -5,12 +5,17 @@ import Pages.DialogContent;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.bytebuddy.utility.RandomString;
 import org.testng.Assert;
 
 public class AlexDepartment_Steps_1 {
 
     DialogContent dc = new DialogContent();
     AlexPOM dep = new AlexPOM();
+
+//    public String createRandomName() {
+//        return RandomStringUtils.randomAlphanumeric(9);   //Mr Ragip give us for random !
+//    }
 
     //1st Scenario
     @Given("Open Department Categories under Setup School Setup")
@@ -25,9 +30,9 @@ public class AlexDepartment_Steps_1 {
     public void add_new_school_department_account() {
         dep.clickMethod(dep.getAddSchoolDepartment()); //pluss buttom
 //        dep.clickMethod(dep.getNameInput());
-        dep.sendKeysMethod(dep.getNameInput(), "Alex");
+        dep.sendKeysMethod(dep.getNameInput(), "AlexV");
 //        dep.clickMethod(dep.getCodeInput());
-        dep.sendKeysMethod(dep.getCodeInput(), "12345");
+        dep.sendKeysMethod(dep.getCodeInput(), "123456");
         dep.clickMethod(dep.getButtonSave());
 
     }
@@ -38,6 +43,7 @@ public class AlexDepartment_Steps_1 {
         dep.verifyContainsText(dep.getSuccessMessage(), "successfully");
         // verification #1
 
+
     }
 
     // 2nd Scenario
@@ -45,19 +51,20 @@ public class AlexDepartment_Steps_1 {
     @When("add any exist School Department")
     public void add_any_exist_school_department() {
         add_new_school_department_account(); // Create new account.
-        dep.wait(3);
-        dep.clickMethod(dep.getAddSchoolDepartment()); //pluss buttom
-        dep.sendKeysMethod(dep.getAddSchoolDepartment(), "Alex5");
-        dep.sendKeysMethod(dep.getCodeInput(), "123456");
-        dep.clickMethod(dep.getButtonSave());
-        dep.wait(5);
-        dep.clickMethod(dep.getCloseDialog());  //closed after warning message already
+//        dep.wait(3);
+//        dep.clickMethod(dep.getAddSchoolDepartment()); //pluss buttom
+//        dep.sendKeysMethod(dep.getAddSchoolDepartment(), "Alex5");
+//        dep.sendKeysMethod(dep.getCodeInput(), "123456");
+//        dep.clickMethod(dep.getButtonSave());
+//        dep.wait(5);
+//        dep.clickMethod(dep.getCloseDialog());  //closed after warning message already
 
     }
 
     @Then("should be see the warning message")
     public void should_be_see_the_warning_message() {
-        dep.verifyContainsText(dep.getWarningMessage(), "already department");
+        dep.wait(3);
+        dep.verifyContainsText(dep.getWarningMessage(), "There is already");
         // Verified success message.  Contains : -- already exist.
         // Second verification step.
 
@@ -66,19 +73,17 @@ public class AlexDepartment_Steps_1 {
     // 3rd Scenario
     @When("edit the School Department Account")
     public void edit_the_school_department_account() {
+        add_new_school_department_account();
         // find new account in search option  not compatible here!
         //findAccount();
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        dep.wait(3);
+
 
         // Edit account
         dep.clickMethod(dep.getEditButtom()); //edit buttom
-        dep.sendKeysMethod(dep.getNameInput(), "Alex");
-        dep.sendKeysMethod(dep.getCodeInput(), "12345");
+        dep.sendKeysMethod(dep.getNameInput(), "AlexVVV");
+        dep.sendKeysMethod(dep.getCodeInput(), "12345666");
         dep.clickMethod(dep.getButtonSave());
         // Edit bank account step.
     }
@@ -100,6 +105,8 @@ public class AlexDepartment_Steps_1 {
     //4th Scenario   -- that scenarion not work out for me !
     @Then("should to see the deleted account success message")
     public void should_to_see_the_deleted_account_success_message() {
+        dep.verifyContainsText(dep.getSuccessMessage(), "successfully");
+
 
 
     }
@@ -116,4 +123,11 @@ public class AlexDepartment_Steps_1 {
 
     }
 
+
+    @Then("delete department")
+    public void deleteDepartment() {
+        dep.clickMethod(dep.getDeleteB());
+
+
+    }
 }
