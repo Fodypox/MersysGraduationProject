@@ -30,7 +30,7 @@ public class AlexDepartment_Steps_1 {
     public void add_new_school_department_account() {
         dep.clickMethod(dep.getAddSchoolDepartment()); //pluss buttom
 //        dep.clickMethod(dep.getNameInput());
-        dep.sendKeysMethod(dep.getNameInput(), "AlexV");
+        dep.sendKeysMethod(dep.getNameInput(), "AlexV");   // right here!  // for some reasond dont want to send the data to it!
 //        dep.clickMethod(dep.getCodeInput());
         dep.sendKeysMethod(dep.getCodeInput(), "123456");
         dep.clickMethod(dep.getButtonSave());
